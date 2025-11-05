@@ -1,0 +1,90 @@
+[gd_scene load_steps=3 format=3 uid="uid://4noutl3k3esx"]
+
+[ext_resource type="Script" uid="uid://dwl2oepdnbb3v" path="res://Scripts/UI/StartMenu.cs" id="1_r73nm"]
+
+[sub_resource type="Theme" id="Theme_wxvro"]
+Button/fonts/font = null
+
+[node name="StartMenu" type="Control" node_paths=PackedStringArray("_startButton", "_quitButton", "_startPanel", "_connectButton", "_backButton", "_playPanel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r73nm")
+_startButton = NodePath("StartPanel/VBoxContainer/StartButton")
+_quitButton = NodePath("StartPanel/VBoxContainer/QuitButton")
+_startPanel = NodePath("StartPanel")
+_connectButton = NodePath("PlayPanel/VBoxContainer/ConnectButton")
+_backButton = NodePath("PlayPanel/VBoxContainer/BackButton")
+_playPanel = NodePath("PlayPanel")
+
+[node name="StartPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="StartPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="StartButton" type="Button" parent="StartPanel/VBoxContainer"]
+layout_direction = 1
+layout_mode = 2
+size_flags_vertical = 3
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="StartPanel/VBoxContainer"]
+layout_direction = 1
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit"
+
+[node name="PlayPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="IpportLineEdit" type="LineEdit" parent="PlayPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="ConnectButton" type="Button" parent="PlayPanel/VBoxContainer"]
+layout_direction = 1
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_wxvro")
+text = "Connect"
+
+[node name="BackButton" type="Button" parent="PlayPanel/VBoxContainer"]
+layout_direction = 1
+layout_mode = 2
+size_flags_vertical = 3
+text = "Back"
