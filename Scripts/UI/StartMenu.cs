@@ -22,6 +22,9 @@ public partial class StartMenu : Control
 		_startButton.Pressed += HandleStartButtonPressed;
 		_quitButton.Pressed += HandleQuitButtonPressed;
 		_backButton.Pressed += HandleBackButtonPressed;
+		
+		_startPanel.SetVisible(true);
+		_playPanel.SetVisible(false);
 	}
 	
 	private void HandleStartButtonPressed()
