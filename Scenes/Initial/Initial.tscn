@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcvjjymo1d38q"]
+
+[ext_resource type="Script" uid="uid://dfx1i3xe62ant" path="res://Scripts/Initial/Initial.cs" id="1_v4wtd"]
+
+[node name="Initial" type="Node"]
+script = ExtResource("1_v4wtd")

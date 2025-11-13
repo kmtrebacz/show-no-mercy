@@ -6,6 +6,6 @@
     <RootNamespace>ShowNoMercy</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Scripts\Network\" />
+    <PackageReference Include="SpaceWizards.Lidgren.Network" Version="0.3.1" />
   </ItemGroup>
 </Project>

@@ -5,7 +5,7 @@
 [sub_resource type="Theme" id="Theme_wxvro"]
 Button/fonts/font = null
 
-[node name="StartMenu" type="Control" node_paths=PackedStringArray("_startButton", "_quitButton", "_startPanel", "_connectButton", "_backButton", "_playPanel")]
+[node name="StartMenu" type="Control" node_paths=PackedStringArray("_startButton", "_quitButton", "_startPanel", "_ipportLineEdit", "_connectButton", "_backButton", "_playPanel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,6 +16,7 @@ script = ExtResource("1_r73nm")
 _startButton = NodePath("StartPanel/VBoxContainer/StartButton")
 _quitButton = NodePath("StartPanel/VBoxContainer/QuitButton")
 _startPanel = NodePath("StartPanel")
+_ipportLineEdit = NodePath("PlayPanel/VBoxContainer/IpportLineEdit")
 _connectButton = NodePath("PlayPanel/VBoxContainer/ConnectButton")
 _backButton = NodePath("PlayPanel/VBoxContainer/BackButton")
 _playPanel = NodePath("PlayPanel")

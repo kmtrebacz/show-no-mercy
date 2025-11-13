@@ -1,5 +1,7 @@
 using Godot;
-using System;
+using ShowNoMercy.Scripts.Network;
+
+namespace ShowNoMercy.Scripts.UI;
 
 public partial class StartMenu : Control
 {
@@ -10,10 +12,11 @@ public partial class StartMenu : Control
 	[Export] 
 	private Panel _startPanel;
 	[Export]
+	private LineEdit _ipportLineEdit;
+	[Export]
 	private Button _connectButton;
 	[Export]
 	private Button _backButton;
-
 	[Export] 
 	private Panel _playPanel;
 	
@@ -22,6 +25,7 @@ public partial class StartMenu : Control
 		_startButton.Pressed += HandleStartButtonPressed;
 		_quitButton.Pressed += HandleQuitButtonPressed;
 		_backButton.Pressed += HandleBackButtonPressed;
+		_connectButton.Pressed += HandleConnectButtonPressed;
 		
 		_startPanel.SetVisible(true);
 		_playPanel.SetVisible(false);
@@ -43,8 +47,10 @@ public partial class StartMenu : Control
 		_startPanel.SetVisible(true);
 		_playPanel.SetVisible(false);
 	}
-	
-	public override void _Process(double delta)
+
+	private void HandleConnectButtonPressed()
 	{
+		var ipport = _ipportLineEdit.GetText();
+		NetworkManager.Client.Start(ipport);
 	}
 }
